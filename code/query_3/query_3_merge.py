@@ -95,8 +95,11 @@ bottom_3_income_crimes_df = crime_with_zip_df.filter(
 
 
 top_3_income_victims = (
-    top_3_income_crimes_df.groupBy("Vict Descent").count().orderBy(col("count").desc())
+    top_3_income_crimes_df.groupBy("Vict Descent")
+    .count()
+    .orderBy(col("count").desc())
 )
+
 bottom_3_income_victims = (
     bottom_3_income_crimes_df.groupBy("Vict Descent")
     .count()
