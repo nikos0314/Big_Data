@@ -105,7 +105,9 @@ bottom_3_income_crimes_df = crime_with_zip_df.filter(
 
 
 top_3_income_victims = (
-    top_3_income_crimes_df.groupBy("Vict Descent").count().orderBy(col("count").desc())
+    top_3_income_crimes_df.groupBy("Vict Descent")
+    .count()
+    .orderBy(col("count").desc())
 ).withColumnRenamed("count", "total victims")
 
 bottom_3_income_victims = (
@@ -145,6 +147,7 @@ map_descent_udf = F.udf(map_descent_code, StringType())
 top_3_income_victims = top_3_income_victims.withColumn(
     "Vict Descent", map_descent_udf(col("Vict Descent"))
 )
+
 bottom_3_income_victims = bottom_3_income_victims.withColumn(
     "Vict Descent", map_descent_udf(col("Vict Descent"))
 )
@@ -157,7 +160,7 @@ print("Bottom 3 Income ZIP Codes Victims by Descent")
 bottom_3_income_victims.show(10, False)
 
 
-spark.stop()ecution Time: {:.2f} seconds".format(end_time_rdd - start_time_rdd))
+
 spark.stop()
 
 
