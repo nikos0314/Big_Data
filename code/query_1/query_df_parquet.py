@@ -16,7 +16,7 @@ spark = (
 )
 
 spark.sparkContext.setLogLevel("WARN")
-"
+
 
 crime_df = spark.read.parquet(
     "hdfs://master:9000/home/user/crime_data_parquet",
