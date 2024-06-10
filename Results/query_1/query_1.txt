@@ -52,7 +52,7 @@
 
 # Data Frame-csv: 28 sec
 
-# SQL-scv:
+# SQL-scv: 28 sec
 
 # Data Frame-parquet:
 
