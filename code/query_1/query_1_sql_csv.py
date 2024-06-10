@@ -11,19 +11,18 @@ spark = (
     .getOrCreate()
 )
 
+spark.conf.set("spark.sql.shuffle.partitions", "8")
+
 spark.sparkContext.setLogLevel("WARN")
 
 
-crime_df = spark.read.csv(
-    "hdfs://master:9000/home/user/crime_data",
-    header=True,
-    inferSchema=True,
-).withColumn("DATE OCC", F.to_timestamp(F.col("DATE OCC"), "MM/dd/yyyy hh:mm:ss a"))
-
-
-crime_df = crime_df.select(
-    F.year(F.col("DATE OCC")).alias("year"),
-    F.month(F.col("DATE OCC")).alias("month"),
+crime_df = (
+    spark.read.csv("hdfs://master:9000/home/user/crime_data", header=True)
+    .withColumn("DATE OCC", F.to_timestamp(F.col("DATE OCC"), "MM/dd/yyyy hh:mm:ss a"))
+    .select(
+        F.year(F.col("DATE OCC")).alias("year"),
+        F.month(F.col("DATE OCC")).alias("month"),
+    )
 )
 
 crime_df.createOrReplaceTempView("crime_data")
