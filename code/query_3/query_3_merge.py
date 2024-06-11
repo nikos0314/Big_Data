@@ -65,7 +65,7 @@ crime_2015_df = (
 crime_with_zip_df = crime_2015_df.hint("merge").join(
     geocoding_df.hint("merge"),
     (crime_2015_df.LAT == geocoding_df.LAT) & (crime_2015_df.LON == geocoding_df.LON),
-    "inner",
+    "left",
 ).select(F.col("Vict Descent"), F.col("ZIP_CODE")).cache()
 
 
