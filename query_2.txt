@@ -1,0 +1,14 @@
++------------+------+
+|time_segment| count|
++------------+------+
+|       Night|243374|
+|     Evening|191792|
+|   Afternoon|151564|
+|     Morning|126611|
++------------+------+
+
+# Executution Times:
+
+# Data Frame: 32 sec
+
+# RDD: 36 sec 
