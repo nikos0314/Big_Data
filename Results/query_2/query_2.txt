@@ -7,7 +7,7 @@
 |     Morning|126611|
 +------------+------+
 
-# Executution Times:
+# Execution Times:
 
 # Data Frame: 32 sec
 
