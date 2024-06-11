@@ -54,6 +54,6 @@
 
 # SQL-scv: 27 sec
 
-# Data Frame-parquet:
+# Data Frame-parquet: 23 sec
 
-# SQL-parquet:
+# SQL-parquet: 24 sec
