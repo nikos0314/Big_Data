@@ -1,0 +1,33 @@
++----------------+----------------+---------+
+|        DIVISION|average_distance|incidents|
++----------------+----------------+---------+
+|     77TH STREET|            2.69|    17019|
+|       SOUTHEAST|           2.106|    12942|
+|          NEWTON|           2.017|     9846|
+|       SOUTHWEST|           2.703|     8912|
+|      HOLLENBECK|           2.649|     6202|
+|          HARBOR|           4.075|     5621|
+|         RAMPART|           1.575|     5115|
+|         MISSION|           4.708|     4504|
+|         OLYMPIC|           1.821|     4424|
+|       NORTHEAST|           3.907|     3920|
+|        FOOTHILL|           3.803|     3774|
+|       HOLLYWOOD|           1.461|     3641|
+|         CENTRAL|           1.139|     3614|
+|        WILSHIRE|           2.313|     3525|
+| NORTH HOLLYWOOD|           2.717|     3466|
+|     WEST VALLEY|           3.532|     2902|
+|        VAN NUYS|            2.22|     2733|
+|         PACIFIC|           3.729|     2708|
+|      DEVONSHIRE|           4.012|     2471|
+|         TOPANGA|           3.481|     2283|
+|WEST LOS ANGELES|           4.248|     1541|
++----------------+----------------+---------+
+
+# Execution Times:
+
+# Data Frame: 34 sec
+
+# Broadcast Join: 47 sec
+
+# Repartition Join: 37 sec
