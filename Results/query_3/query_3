@@ -31,6 +31,6 @@ Bottom 3 Income ZIP Codes Victims by Descent
 
 # Merge Join: 28 sec
 
-# Shuffle Hash Join: 28 sec
+# Shuffle Hash Join: 27 sec
 
 # Shuffle Replicate Nl Joinn: 37 sec
