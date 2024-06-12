@@ -133,7 +133,7 @@ mapping_expr = when(col("Vict Descent") == "A", "Asian") \
     .when(col("Vict Descent") == "Z", "Asian Indian") \
     .otherwise("Unknown")
 
-# Apply the mapping to the DataFrames
+
 top_3_income_victims = top_3_income_victims.withColumn("Vict Descent", mapping_expr)
 bottom_3_income_victims = bottom_3_income_victims.withColumn("Vict Descent", mapping_expr)
 
